@@ -20,8 +20,8 @@ const get_stock = () => {
 
 		// Calculates the new total stock worth every update
 		let total_worth = 0;
-		data.forEach(stock_name => total_worth +=
-			parseInt(document.querySelector(`#${stock_name.name} .amount`).textContent) * parseInt(document.querySelector(`#${stock_name.name} .price`).textContent));
+		data.forEach(stock_item => total_worth +=
+			parseInt(document.querySelector(`#${stock_item.name} .amount`).textContent) * parseInt(document.querySelector(`#${stock_item.name} .price`).textContent));
 		document.getElementById("total_worth").innerText = total_worth;
 	});
 };
